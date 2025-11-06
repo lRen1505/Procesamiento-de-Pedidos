@@ -8,10 +8,8 @@ package app.pedidos;
  *
  * @author yusuk
  */
-public class FacturaService {
-
-    void generarFactura(String cliente, double total) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+public interface FacturaService {
+    
+    void generarFactura(String cliente, double total);
     
 }
