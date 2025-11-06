@@ -8,7 +8,7 @@ package app.pedidos;
  *
  * @author yusuk
  */
-public class ProcesoPedidos {
+public class Main {
 
     /**
      * @param args the command line arguments
