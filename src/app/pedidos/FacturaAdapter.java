@@ -8,4 +8,9 @@ public class FacturaAdapter extends FacturaService {
     public FacturaAdapter(LegacyBillingSystem legacySystem) {
         this.legacySystem = legacySystem;
     }
+    @Override
+    public void generarFactura(String cliente, double total) {
+        System.out.println("Adaptando llamada al sistema legacy...");
+        legacySystem.createInvoice(cliente, total);
+    }
 }
