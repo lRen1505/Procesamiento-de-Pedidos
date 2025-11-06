@@ -9,5 +9,9 @@ package app.pedidos;
  * @author yusuk
  */
 public class ComprobanteService {
+
+    String generarComprobante(String cliente, String producto, double subtotal, double igv, double total) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
