@@ -27,7 +27,29 @@ public class PedidoFacade {
         if (!validacionService.validarStock(producto, cantidad)) {
             return "ERROR: No hay suficiente stock para el producto";
         }
+        // 2) Cálculos
         double subtotal = calculoService.calcularSubtotal(producto, cantidad);
         double igv = calculoService.calcularIGV(subtotal);
         double total = calculoService.calcularTotal(subtotal, igv);
+
+        System.out.println("[CÁLCULO] Subtotal: S/. " + String.format("%.2f", subtotal));
+        System.out.println("[CÁLCULO] IGV (18%): S/. " + String.format("%.2f", igv));
+        System.out.println("[CÁLCULO] Total: S/. " + String.format("%.2f", total));
+        System.out.println();
+
+        // 3) Registro
+        registroService.registrarPedido(cliente, producto, cantidad);
+        System.out.println();
+
+        // 4) Adapter
+        facturaService.generarFactura(cliente, total);
+        System.out.println();
+
+        // 5) Comprobante
+        String comprobante = comprobanteService.generarComprobante(
+                cliente, producto, subtotal, igv, total
+        );
+
+        return comprobante;
+    }
 }
