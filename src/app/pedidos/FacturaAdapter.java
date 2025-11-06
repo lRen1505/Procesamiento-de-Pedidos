@@ -2,7 +2,7 @@
 package app.pedidos;
 
 
-public class FacturaAdapter extends FacturaService {
+public class FacturaAdapter implements FacturaService {
     private LegacyBillingSystem legacySystem;
 
     public FacturaAdapter(LegacyBillingSystem legacySystem) {
