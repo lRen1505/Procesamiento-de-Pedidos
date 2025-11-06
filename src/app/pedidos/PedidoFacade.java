@@ -15,5 +15,16 @@ public class PedidoFacade {
         this.comprobanteService = new ComprobanteService();
         this.facturaService = facturaService;
     }
-   
+    public String procesarPedido(String cliente, String producto, int cantidad) {
+        System.out.println("\n===== INICIANDO PROCESO DE PEDIDO =====\n");
+        
+        
+        if (!validacionService.validarCantidad(cantidad)) {
+            return "ERROR: La cantidad debe ser positiva";
+        }
+        
+        
+        if (!validacionService.validarStock(producto, cantidad)) {
+            return "ERROR: No hay suficiente stock para el producto";
+        }
 }
