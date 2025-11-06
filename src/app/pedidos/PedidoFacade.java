@@ -27,4 +27,7 @@ public class PedidoFacade {
         if (!validacionService.validarStock(producto, cantidad)) {
             return "ERROR: No hay suficiente stock para el producto";
         }
+        double subtotal = calculoService.calcularSubtotal(producto, cantidad);
+        double igv = calculoService.calcularIGV(subtotal);
+        double total = calculoService.calcularTotal(subtotal, igv);
 }
