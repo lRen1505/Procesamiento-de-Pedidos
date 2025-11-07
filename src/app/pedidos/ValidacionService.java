@@ -9,10 +9,10 @@ public class ValidacionService {
     System.out.println(" Verificando cantidad: " + cantidad);
         
         if (cantidad > 0) {
-            System.out.println("Cantidad válida: OK");
+            System.out.println("Cantidad valida: OK");
             return true;
         } else {
-            System.out.println("Cantidad inválida: CANTIDAD INCORRECTA");
+            System.out.println("Cantidad invalida: CANTIDAD INCORRECTA");
             return false;
         }
          
