@@ -12,21 +12,21 @@ public class ComprobanteService {
       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
       String fechaHora = ahora.format(formatter); 
       
-      StringBuilder comprobante = new StringBuilder();
+StringBuilder comprobante = new StringBuilder();
         comprobante.append("\n");
-        comprobante.append("╔════════════════════════════════════════════╗\n");
-        comprobante.append("║      COMPROBANTE DE PAGO ELECTRÓNICO  ║\n");
-        comprobante.append("╠════════════════════════════════════════════╣\n");
-        comprobante.append("║ Fecha: ").append(String.format("%-33s", fechaHora)).append("║\n");
-        comprobante.append("╠════════════════════════════════════════════╣\n");
-        comprobante.append("║ Cliente: ").append(String.format("%-31s", cliente)).append("║\n");
-        comprobante.append("║ Producto: ").append(String.format("%-30s", producto)).append("║\n");
-        comprobante.append("╠════════════════════════════════════════════╣\n");
-        comprobante.append("║ Subtotal:        S/. ").append(String.format("%18.2f", subtotal)).append(" ║\n");
-        comprobante.append("║ IGV (18%):       S/. ").append(String.format("%18.2f", igv)).append(" ║\n");
-        comprobante.append("╠════════════════════════════════════════════╣\n");
-        comprobante.append("║ TOTAL A PAGAR:   S/. ").append(String.format("%18.2f", total)).append(" ║\n");
-        comprobante.append("╚════════════════════════════════════════════╝\n");
+        comprobante.append("================================================\n");
+        comprobante.append("        COMPROBANTE DE PAGO ELECTRONICO        \n");
+        comprobante.append("================================================\n");
+        comprobante.append("  Fecha: ").append(fechaHora).append("\n");
+        comprobante.append("------------------------------------------------\n");
+        comprobante.append("  Cliente:  ").append(cliente).append("\n");
+        comprobante.append("  Producto: ").append(producto).append("\n");
+        comprobante.append("------------------------------------------------\n");
+        comprobante.append("  Subtotal:       S/. ").append(String.format("%10.2f", subtotal)).append("\n");
+        comprobante.append("  IGV (18%):      S/. ").append(String.format("%10.2f", igv)).append("\n");
+        comprobante.append("================================================\n");
+        comprobante.append("  TOTAL A PAGAR:  S/. ").append(String.format("%10.2f", total)).append("\n");
+        comprobante.append("================================================\n");
         
         return comprobante.toString();
     
