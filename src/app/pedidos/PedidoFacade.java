@@ -32,9 +32,9 @@ public class PedidoFacade {
         double igv = calculoService.calcularIGV(subtotal);
         double total = calculoService.calcularTotal(subtotal, igv);
 
-        System.out.println("[CÁLCULO] Subtotal: S/. " + String.format("%.2f", subtotal));
-        System.out.println("[CÁLCULO] IGV (18%): S/. " + String.format("%.2f", igv));
-        System.out.println("[CÁLCULO] Total: S/. " + String.format("%.2f", total));
+        System.out.println(" Subtotal: S/. " + String.format("%.2f", subtotal));
+        System.out.println(" IGV (18%): S/. " + String.format("%.2f", igv));
+        System.out.println(" Total: S/. " + String.format("%.2f", total));
         System.out.println();
 
         // 3) Registro
