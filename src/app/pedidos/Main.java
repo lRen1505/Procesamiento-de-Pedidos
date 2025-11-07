@@ -12,11 +12,16 @@ public class Main {
    FacturaService facturaService = new FacturaAdapter(legacySystem);
    PedidoFacade pedidoFacade = new PedidoFacade(facturaService);
    
-   System.out.println("CASO 1: Pedido con stock suficiente");
+   System.out.println(" Pedido con stock suficiente");
         String resultado1 = pedidoFacade.procesarPedido(
             "Juan Velarde", 
             "Laptop HP", 
             2
        );
+        System.out.println("Comprobante generado:");
+            System.out.println(resultado1);
+            
+            System.out.println("\n" + "=".repeat(60) + "\n");
+            
     }
 }
