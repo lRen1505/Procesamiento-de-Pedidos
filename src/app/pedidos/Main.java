@@ -12,4 +12,10 @@ public class Main {
    FacturaService facturaService = new FacturaAdapter(legacySystem);
    PedidoFacade pedidoFacade = new PedidoFacade(facturaService);
    
-}
+   System.out.println("CASO 1: Pedido con stock suficiente");
+        String resultado1 = pedidoFacade.procesarPedido(
+            "Juan Pérez", 
+            "Laptop HP", 
+            2
+        );
+}}
