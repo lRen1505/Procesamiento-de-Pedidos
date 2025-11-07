@@ -5,11 +5,19 @@ package app.pedidos;
 public class ValidacionService {
 
     boolean validarCantidad(int cantidad) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
 
-    boolean validarStock(String producto, int cantidad) {
-        throw new UnsupportedOperationException("Not supported yet.");
+ public boolean validarStock(String producto, int cantidad) {
+        
+   System.out.println("Verificando stock de: " + producto);
+        
+        if (cantidad <= 10) {
+            System.out.println("Stock disponible: OK");
+            return true;
+        } else {
+            System.out.println(" Stock insuficiente: NO HAY STOCK");
+            return false;
+        }
     }
-    
 }
